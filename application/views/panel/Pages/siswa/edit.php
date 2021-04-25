@@ -34,13 +34,16 @@
                  			</table>
                  			<input name="photo" type="file" class="btn btn-sm bg-navy" style="border-radius: 0px; width: 200px;" accept="image/*" onchange="loadFile(event)">
 						        	<input type="hidden" name="photo_old" value="">
-                 			<!-- <a href="" class="btn btn-sm bg-navy">Select Image</a> -->
                  		</td>
                  	</tr>
                     <tr>
                         <td class="bold">Paket Program</td>
                         <td class="">
-                            <input type="text" name="id_paket" id="id_paket" class="form-control" value="<?= $det['id_paket'] ?>">
+                            <select class="form-control select2me" name="id_paket" id="id_paket" >
+                              <?php foreach ($ms_paket->result() as $pkt): ?>
+                                <option value="<?= $pkt->ID ?>" <?php if($pkt->ID==$det['id_paket']) ?> ><?= strtoupper($pkt->kode) ?> - <?= strtoupper($pkt->nama) ?></option>
+                              <?php endforeach ?>
+                             </select> 
                         </td>
                     </tr>
                  	<tr>
@@ -65,7 +68,11 @@
                     <tr>
                         <td class="bold">Agama</td>
                         <td class="">
-                            <input type="text" name="id_agama" id="id_agama" class="form-control" value="<?= $det['id_agama'] ?>">
+                          <select class="form-control select2me" name="id_agama" id="id_agama" >
+                            <?php foreach ($ms_agama->result() as $agama): ?>
+                              <option value="<?= $agama->ID ?>" <?php if($agama->ID==$det['id_agama']) ?> > <?= strtoupper($agama->nama) ?></option>
+                            <?php endforeach ?>
+                           </select>  
                         </td>
                     </tr>
                     <tr>
@@ -118,14 +125,26 @@
                     
                 </div> -->
 	              <div class="tab-pane active" id="profile">
-	                 <table class="table" width="100%">
-	                 	<tr>
-	                 		<td class="bold" width="20%">NIK</td>
-	                 		<td>
-	                 			<input type="text" name="nik" id="nik" class="form-control" value=" ">
-	                 		</td>
-	                 	</tr> 
-	                 </table>
+                 <table class="table" width="100%">
+                 	<tr>
+                 		<td class="bold" width="20%">NIK</td>
+                 		<td>
+                 			<input type="text" name="nik" id="nik" class="form-control" value=" ">
+                 		</td>
+                 	</tr> 
+                  <tr>
+                    <td class="bold" width="20%">NIK</td>
+                    <td>
+                      <input type="text" name="nik" id="nik" class="form-control" value=" ">
+                    </td>
+                  </tr> 
+                  <tr>
+                    <td class="bold" width="20%">NIK</td>
+                    <td>
+                      <input type="text" name="nik" id="nik" class="form-control" value=" ">
+                    </td>
+                  </tr> 
+                 </table>
 	              </div> 
                 <div class="tab-pane" id="Lampiran">
                     <table class="table" width="100%">

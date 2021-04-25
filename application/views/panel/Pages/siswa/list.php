@@ -1,16 +1,4 @@
-<div class="row">
-    <!-- <a class="btn btn-app" style="border-radius: 0px;" href="<?= base_url() ?>apps/hr/master/direktorat">
-      <i class="fa fa-bank"></i> Sub-Direktorat
-    </a>
-    <a class="btn btn-app" style="border-radius: 0px;" href="<?= base_url() ?>app">
-      <i class="fa fa-bank"></i> Division
-    </a>
-    <a class="btn btn-app" style="border-radius: 0px;" href="<?= base_url() ?>app">
-      <i class="fa fa-bank"></i> Department
-    </a>
-    <a class="btn btn-app" style="border-radius: 0px;" href="<?= base_url() ?>app">
-      <i class="fa fa-users"></i> Jabatan
-    </a> -->
+<div class="row"> 
     <div class="pull-right">
       <a class="btn btn-app" style="border-radius: 0px;" href="<?= base_url() ?>panel/pages/siswa/filter/a"> 
 	      <i class="fa fa-user"></i> Paket A
@@ -47,9 +35,7 @@
                 <a onclick="window.history.back();" class="btn btn-sm bg-navy" style="border-radius: 0px;"><i class="fa fa-angle-left"></i> Back</a>
                 <a target="_blank" href="<?= base_url() ?>regist" class="btn btn-sm btn-info" style="border-radius: 0px;"><i class="fa fa-plus"></i> Tambah data</a>
                 <div class="pull-right">
-                  <!-- <a href="" class="btn btn-sm btn-primary" style="border-radius: 0px;" ><i class="fa fa-print"></i> Print</a>
-                  <a href="" class="btn btn-sm btn-primary" style="border-radius: 0px; background-color: green;"><i class="fa fa-file-excel-o"></i> Export Excel</a>
-                  <a href="" class="btn btn-sm btn-primary" style="border-radius: 0px; background-color: green;"><i class="fa fa-file-excel-o"></i> Import Excel</a> -->
+                  
                 </div>
               </div>
 

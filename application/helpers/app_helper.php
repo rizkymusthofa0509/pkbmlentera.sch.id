@@ -1,4 +1,21 @@
 <?php
+
+	
+function label($id='')
+	{
+		switch ($id) {
+			case '1':
+				echo '<label class="label label-success">Aktif</label>';
+			break;
+			case '0':
+				echo '<label class="label label-danger">Tidak Aktif</label>';
+			break;
+			
+			default:
+				echo '<label class="label label-warning">Not Found!</label>';
+			break;
+		}
+	}
 	
 	function login()
 	{
