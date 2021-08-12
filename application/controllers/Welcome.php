@@ -22,17 +22,4 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-
-	public function new_form(){
-		$this->load->helper('form');
-		$this->load->model('m_regist');
-
-		$data['title'] = 'Form Registration';
-		$data['agama'] = $this->db->get('mst_agama');
-		$data['kabupaten'] = $this->m_regist->get_kab(32);
-		$data['provinsi'] = $this->m_regist->get_prov();
-		$this->load->view('regist/new/header', $data);
-		$this->load->view('regist/new/index', $data);
-		$this->load->view('regist/new/footer');
-	}
 }
