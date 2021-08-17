@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 	    /*Load session*/
 	    // $this->load->library('session');
 	    /*Model*/
-	    // $this->load->model('M_employee');  
+	    $this->load->model(array('M_blogs','M_galeri'));  
 	    // $this->load->helper('dompet_helper');  
 	    // login(); 
 	}
@@ -16,9 +16,13 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = '';
-		$data['pages'] = '';
+		$data['pages'] = 'home/home';
+		$data['blogs'] = $this->M_blogs->getAll();
+		$data['galImage'] = $this->M_galeri->getAllImage();
 		$this->load->view('main',$data);
 	}
+
+	
 	
 	 
 

@@ -167,14 +167,16 @@
 		}
 		return $number;
 	}
-	function date_idn($get='')
+	function date_indo($get='')
 	{	
-		$pisah  =  explode("-",$get);
+		//  2021-05-05 12:12:00
+		$get_date = explode(" ",$get);
+		$pisah  =  explode("-",$get_date[0]);
 		$tgl 	= $pisah[2];
 		$bln 	= $pisah[1];
 		$thn 	= $pisah[0];
 
-		return $tgl.' '.call_month($bln).' '.$thn;
+		return $tgl.' '.call_month($bln).' '.$thn.' '.$get_date[1];
 	}
 
 	function pdf()
