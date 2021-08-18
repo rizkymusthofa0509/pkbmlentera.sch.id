@@ -16,6 +16,10 @@
     <!-- jvectormap -->
     <link href="<?= base_url() ?>temp/admin/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
 
+     <link href="<?= base_url() ?>temp/admin/plugins/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+     <link href="<?= base_url() ?>temp/admin/plugins/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+     <link href="<?= base_url() ?>temp/admin/plugins/datatables/buttons.bootstrap4.css" rel="stylesheet" type="text/css" />
+     <link href="<?= base_url() ?>temp/admin/plugins/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
 
 
     <!-- App css -->
@@ -148,11 +152,11 @@
                                         <i class="feather-bar-chart-2"></i>Data Siswa <div class="arrow-down"></div>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="topnav-charts">
-                                        <a href="<?= base_url() ?>apps/" class="dropdown-item">Data siswa</a>
-                                        <a href="<?= base_url() ?>apps/" class="dropdown-item">Data E-mail Account</a>
-                                        <a href="<?= base_url() ?>apps/" class="dropdown-item">Penerima Bantuan</a>
-                                        <a href="<?= base_url() ?>apps/" class="dropdown-item">Data Alamat Siswa</a>
-                                        <a href="<?= base_url() ?>apps/" class="dropdown-item">Data Account Siswa</a>
+                                        <a href="<?= base_url() ?>apps/siswa" class="dropdown-item">Data siswa</a>
+                                        <a href="<?= base_url() ?>apps/siswa/email" class="dropdown-item">Data E-mail Account</a>
+                                        <a href="<?= base_url() ?>apps/siswa/bantuan" class="dropdown-item">Penerima Bantuan</a>
+                                        <a href="<?= base_url() ?>apps/siswa/alamat" class="dropdown-item">Data Alamat Siswa</a>
+                                        <a href="<?= base_url() ?>apps/siswa/account" class="dropdown-item">Data Account Siswa</a>
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -209,12 +213,15 @@
                    <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-flex align-items-center justify-content-between">
-                            <h4 class="mb-0 font-size-18">Dashboard</h4>
+                            <h4 class="mb-0 font-size-18"><?= $modul ?></h4>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Ubazo</a></li>
-                                    <li class="breadcrumb-item active">Dashboard</li>
+                                    <?php
+                                        foreach ($link as $l => $value) {
+                                            echo '<li class="breadcrumb-item">'.$l.'</li>';
+                                        }
+                                    ?> 
                                 </ol>
                             </div>
 
@@ -270,6 +277,24 @@
     <!-- Morris Custom Js-->
     <script src="<?= base_url() ?>temp/admin/assets/pages/dashboard-demo.js"></script>
 
+     <!-- third party js -->
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/dataTables.bootstrap4.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/buttons.flash.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/buttons.print.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/dataTables.keyTable.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/dataTables.select.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/pdfmake.min.js"></script>
+    <script src="<?= base_url() ?>temp/admin/plugins/datatables/vfs_fonts.js"></script>
+    <!-- third party js ends -->
+
+    <!-- Datatables init -->
+    <script src="<?= base_url() ?>temp/admin/assets/pages/datatables-demo.js"></script>
    
     <!--Vactor map-->
     <script src="<?= base_url() ?>temp/admin/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>

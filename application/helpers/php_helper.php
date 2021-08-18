@@ -179,6 +179,17 @@
 		return $tgl.' '.call_month($bln).' '.$thn.' '.$get_date[1];
 	}
 
+	function date_idn($get='')
+	{	
+		//  2021-05-05 12:12:00
+		$pisah  =  explode("-",$get);
+		$tgl 	= $pisah[2];
+		$bln 	= $pisah[1];
+		$thn 	= $pisah[0];
+
+		return $tgl.' '.call_month($bln).' '.$thn.' ';
+	}
+
 	function pdf()
 	{
 		include APPPATH . 'third_party/mpdf/vendor/autoload.php';

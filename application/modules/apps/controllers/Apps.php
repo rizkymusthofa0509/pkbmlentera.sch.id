@@ -25,10 +25,9 @@ class Apps extends CI_Controller {
 	
 	public function index()
 	{ 
-		$data['title'] 	= 'Multifab - Application';
+		$data['title'] 	= 'PKBM - Admin Panel';
 		$data['modul']  = 'Dashboard';
-		$data['link']   = array('<i class="fa fa-home"></i> 
-								 Dashboard'     => 'apps'
+		$data['link']   = array('Dashboard'     => 'apps',
 						  );
 		$data['pages']  = 'dashboard/home'; 
 		$this->load->view('main',$data); 
