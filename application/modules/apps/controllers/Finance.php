@@ -18,7 +18,7 @@ class Finance extends CI_Controller {
 	    /*Load session*/
 	    // $this->load->library('session');
 	    /*Model*/
-	    // $this->load->model('M_employee');  
+	    $this->load->model(array('siswa_model','pembayaran_model'));  
 	    // $this->load->helper('dompet_helper');  
 	    // login(); 
 	}
@@ -33,6 +33,22 @@ class Finance extends CI_Controller {
                                 'Siswa'     => 'apps',
 						  );
 		$data['pages']  = 'finance/list'; 
+		$data['siswa']  = $this->siswa_model->getAllSiswa();
+		$this->load->view('main',$data); 
+	}
+
+	public function detail($siswa_id='')
+	{
+		$data['title'] 	= 'PKBM - Admin Panel';
+		$data['modul']  = 'Dashboard';
+		$data['link']   = array(
+                                'Dashboard'     => 'apps',
+                                'Data Keuangan'     => 'apps',
+                                'Siswa'     => 'apps',
+						  );
+		$data['pages']  = 'finance/detail'; 
+		$data['detail']  = $this->pembayaran_model->getAllPembayaran();
+		echo var_dump($data['detail']->result());
 		$this->load->view('main',$data); 
 	}
  
