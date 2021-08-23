@@ -1,13 +1,17 @@
 <div class="row">
     <div class="col-12">
             <div class="card">
+            <div class="card-header text-right">
+            <a href="<?= base_url() ?>apps/finance" class="btn btn-sm btn-success"><i class="fa fa-plus"></i> Create New</a>
+            <a href="<?= base_url() ?>apps/finance" class="btn btn-sm btn-danger"> Back</a>
+            </div>
             <div class="card-body">
-                <h4 class="card-title"> Siswa</h4>
+                <h4 class="card-title"> History Transaction</h4>
                 <p class="card-subtitle mb-4">
-                    Database E-mail seluruh siswa.
+                    Detail Transaction.
                 </p>
 
-                <table id="basic-datatable" class="table dt-responsive nowrap">
+                <table id="" class="table dt-responsive nowrap">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -16,6 +20,7 @@
                             <th>Deskripsi</th> 
                             <th>Bank Pengirim</th>
                             <th>Bank Penerima</th>
+                            <th>Lampiran</th>
                         </tr>
                     </thead> 
                     <tbody>
@@ -30,7 +35,7 @@
                                     <td><?= $list->description ?></td> 
                                     <td><?= $list->from_name_bank ?> / <?= $list->from_number_bank ?></td> 
                                     <td><?= $list->to_name_bank ?> / <?= $list->to_number_bank ?></td> 
-                                    <td><?= $list->lampiran ?></td> 
+                                    <td><a target="_blank" href=""><span class="badge badge-success"><i class="fa fa-file-pdf"></i> Open File</span></a></td> 
                                 </tr>
                                 <?php
                             }

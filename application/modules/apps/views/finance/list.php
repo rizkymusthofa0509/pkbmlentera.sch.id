@@ -11,6 +11,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Detail Transaction</th>
                             <th>Nama Lengkap</th>
                             <th>Paket</th> 
                             <th>E-mail</th> 

@@ -47,8 +47,7 @@ class Finance extends CI_Controller {
                                 'Siswa'     => 'apps',
 						  );
 		$data['pages']  = 'finance/detail'; 
-		$data['detail']  = $this->pembayaran_model->getAllPembayaran();
-		echo var_dump($data['detail']->result());
+		$data['detail']  = $this->pembayaran_model->getAllPembayaran($siswa_id);
 		$this->load->view('main',$data); 
 	}
  
