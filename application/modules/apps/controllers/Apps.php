@@ -10,49 +10,29 @@
 -- APP NAME   : JOB CAREER
 -- ---------------------------------------------------------------
 */
-defined('BASEPATH') OR exit('No direct script access allowed');
-class Apps extends CI_Controller {
- 	function __construct() {
-	    parent::__construct(); 
+defined('BASEPATH') or exit('No direct script access allowed');
+class Apps extends CI_Controller
+{
+	function __construct()
+	{
+		parent::__construct();
 
-	    /*Load session*/
-	    // $this->load->library('session');
-	    /*Model*/
-	    // $this->load->model('M_employee');  
-	    // $this->load->helper('dompet_helper');  
-	    // login(); 
+		/*Load session*/
+		// $this->load->library('session');
+		/*Model*/
+		// $this->load->model('M_employee');  
+		// $this->load->helper('dompet_helper');  
+		// login(); 
 	}
-	
+
 	public function index()
-	{ 
+	{
 		$data['title'] 	= 'PKBM - Admin Panel';
 		$data['modul']  = 'Dashboard';
-		$data['link']   = array('Dashboard'     => 'apps',
-						  );
-		$data['pages']  = 'dashboard/home'; 
-		$this->load->view('main',$data); 
+		$data['link']   = array(
+			'Dashboard',
+		);
+		$data['pages']  = 'panel/finance/list';
+		$this->load->view('main', $data);
 	}
- 
- 	 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
