@@ -183,9 +183,7 @@ class Register extends CI_Controller {
 		echo $this->_sendEmail($id);
 	}
 
-	public function as(){
-		echo "string";
-	}
+	 
 
  	 
 

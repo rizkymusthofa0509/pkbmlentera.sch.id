@@ -23,7 +23,7 @@
     <!--Banner Item End-->
 
     <!--Search Box Start-->
-    <div class="search-box">
+    <!-- <div class="search-box">
     <div class="container">
         <form action="#" class="search-form p-4">
         <div class="search-title">
@@ -76,7 +76,7 @@
         </div>
         </form>
     </div>
-    </div>
+    </div> -->
     <!--Search Box End-->
 </div>
 <!--Banner End--> 

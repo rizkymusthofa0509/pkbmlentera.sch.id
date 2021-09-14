@@ -122,10 +122,10 @@
                     <li class="has-submenu">
                       <a href="#">PPDB</a>
                       <ul class="submenu">
-                        <li><a href="<?= base_url() ?>">Pendaftaran</a></li>
-                        <li><a href="<?= base_url() ?>">Cek Status Pendaftaran</a></li>
+                        <li><a href="<?= base_url() ?>register">Pendaftaran</a></li>
+                        <li><a href="<?= base_url() ?>register/cek">Cek Status Pendaftaran</a></li>
                       </ul>
-                    </li> 
+                    </li>  
                     <!-- <li class="has-submenu">
                       <a href="index.html">Home</a>
                       <ul class="submenu">
