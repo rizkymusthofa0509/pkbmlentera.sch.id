@@ -4,79 +4,22 @@
     <div class="banner-item banner-bg overlay">
     <div class="container">
         <div class="banner-title text-center">
-        <h2>Learn with Eskul</h2>
+        <h2><?= webinfo('school_name') ?></h2>
         </div>
         <div class="description">
         <p class="text-light text-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna <br />
-            aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-            viverra maecenas accumsan lacus vel facilisis.
+            <?= webinfo('description') ?>
         </p>
         </div>
         <div class="banner-btn text-center">
-        <a href="about.html" class="btn btn-primary">Learn More</a>
-        <a href="courses.html" class="btn btn-light">Our Courses</a>
+        <a href="<?= base_url() ?>register" class="btn btn-primary"><i class="fa fa-desktop"></i> Registrasi</a> 
         </div>
     </div>
     </div>
     <!--Banner Item End-->
 
     <!--Search Box Start-->
-    <!-- <div class="search-box">
-    <div class="container">
-        <form action="#" class="search-form p-4">
-        <div class="search-title">
-            <h4>Search Here</h4>
-            <hr />
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-            <div class="form-group">
-                <label for="category">Category</label>
-                <select class="custom-select" id="category">
-                <option selected="selected">Select Category</option>
-                <option value="Web Design">Web Design</option>
-                <option value="Web Development">Web Development</option>
-                <option value="Graphics Design">Graphics Design</option>
-                </select>
-            </div>
-            </div>
-            <div class="col-md-3">
-            <div class="form-group">
-                <label for="language">Language</label>
-                <select class="custom-select" id="language">
-                <option selected="selected">Select Language</option>
-                <option value="English">English</option>
-                <option value="Bangla">Bangla</option>
-                <option value="Arabic">Arabic</option>
-                </select>
-            </div>
-            </div>
-            <div class="col-md-3">
-            <div class="form-group">
-                <label for="topic">Topic</label>
-                <input
-                type="text"
-                id="topic"
-                class="form-control"
-                placeholder="Write Topic"
-                />
-            </div>
-            </div>
-            <div class="col-md-3">
-            <div class="form-group submit-btn">
-                <input
-                type="submit"
-                value="Search Now"
-                class="btn btn-secondary flat"
-                />
-            </div>
-            </div>
-        </div>
-        </form>
-    </div>
-    </div> -->
+     
     <!--Search Box End-->
 </div>
 <!--Banner End--> 
@@ -105,7 +48,7 @@
                     <!--Course Item Start-->
                     <div class="course-item">
                         <div class="thumb">
-                        <img src="<?= base_url() ?>assets/blog/<?= $blog->file ?>" alt="Image" /> 
+                        <img src="<?= base_url() ?>assets/blog/<?= $blog->file ?>" alt="Image" style="width:100%;height:300px;" /> 
                         </div>
                         <div class="course-info bg-light p-3">
                         <div class="meta">
@@ -153,8 +96,7 @@
         <h2 class="text-white"><?= webinfo('school_name') ?></h2>
         <div class="line bg-light mt-3 mb-3"></div>
         <p class="description text-white">
-            <?= webinfo('description') ?>
-            
+            <?= webinfo('description') ?> 
         </p>
         </div>
         <div class="facility-list light">

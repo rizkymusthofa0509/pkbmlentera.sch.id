@@ -22,8 +22,7 @@ class Apps extends CI_Controller
 		/*Model*/
 		// $this->load->model('M_employee');  
 		// $this->load->helper('dompet_helper');  
-		// login(); 
-		$this->load->library('grocery_CRUD');
+		login();  
 	}
 
 	public function index()
@@ -33,49 +32,11 @@ class Apps extends CI_Controller
 		$data['link']   = array(
 			'Dashboard',
 		);
-		$data['pages']  = 'crud/home';
-		$crud = new grocery_CRUD(); 
-		$crud->set_theme('datatables');
-		$crud->set_table('tbl_blog');
-		$crud->set_subject('Data Blog');
-		$crud->required_fields('title');
-		$crud->columns('title','file','is_active','description','created_at');
-		// $crud->fields('judul','Gambar','Status','Deskripsi','Created at');
-		$display = [
-			'title'=>'judul',
-			'file'=>'Gambar',
-			'is_active'=>'Status',
-			'description'=>'Content Blog',
-			'created_at'=>'Dibuat pada',
-		];
-		$crud->display_as($display);
+		$data['pages']  = 'dashboard/home';
 
-		$output = $crud->render();
-
-		$this->load->view('main', $data);
-		// $crud = new grocery_CRUD(); 
-		// $crud->set_theme('datatables');
-		// $crud->set_table('tbl_blog');
-		// $crud->set_subject('Data Blog');
-		// $crud->required_fields('title');
-		// $crud->columns('title','file','is_active','description','created_at');
-		// // $crud->fields('judul','Gambar','Status','Deskripsi','Created at');
-		// $display = [
-		// 	'title'=>'judul',
-		// 	'file'=>'Gambar',
-		// 	'is_active'=>'Status',
-		// 	'description'=>'Content Blog',
-		// 	'created_at'=>'Dibuat pada',
-		// ];
-		// $crud->display_as($display);
-
-		// $output = $crud->render();
-
-		// $this->_example_output($output);
+		$this->load->view('main',$data);
+		 
 	}
 
-	function _example_output($output = null) 
-    {
-        $this->load->view('test',$output);    
-    } 
+	 
 }

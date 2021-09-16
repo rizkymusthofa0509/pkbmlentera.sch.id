@@ -75,12 +75,7 @@
                         </div>
     
                         <div class="dropdown d-inline-block">
-                            <button type="button" class="btn header-item waves-effect waves-light"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="" src="<?= base_url() ?>temp/admin/assets/images/flags/us.jpg" alt="Header Language" height="16">
-                                <span class="d-none d-sm-inline-block ml-1">English</span>
-                                <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
-                            </button>
+                             
                             <div class="dropdown-menu dropdown-menu-right">
                                 
                                 <!-- item-->
@@ -112,20 +107,12 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="<?= base_url() ?>temp/admin/assets/images/users/avatar-3.jpg"
                                     alt="Header Avatar">
-                                <span class="d-none d-sm-inline-block ml-1">Administrator</span>
+                                <span class="d-none d-sm-inline-block ml-1"><?= session('fullname') ?></span>
                                 <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right"> 
-                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                                    <span>Profile</span> 
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                                    Settings
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                                    <span>Lock Account</span>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                                 
+                                <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= base_url() ?>auth/logout">
                                     <span>Log Out</span>
                                 </a>
                             </div>

@@ -13,7 +13,7 @@
                             <!--Blog Post Item Start-->
                             <div class="blog-item">
                                 <div class="blog-thumb">
-                                <a href="<?= base_url() ?>home/blog/detail/<?= $blog->id ?>"><img src="<?= base_url() ?>assets/blog/<?= $blog->file ?>" alt="Image"/></a>
+                                <a href="<?= base_url() ?>home/blog/detail/<?= $blog->id ?>"><img src="<?= base_url() ?>assets/blog/<?= $blog->file ?>" alt="Image" style="width:100%;height:300px;" /></a>
                                 </div>
                                 <div class="blog-info p-3 bg-bglight">
                                 <div class="blog-title">

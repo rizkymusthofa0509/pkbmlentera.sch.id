@@ -20,12 +20,74 @@
     <link rel="stylesheet" href="<?= base_url() ?>temp/home/css/lightbox.min.css" />
     <link rel="stylesheet" href="<?= base_url() ?>temp/home/css/modal-video.min.css" />
     <link rel="stylesheet" href="<?= base_url() ?>temp/home/style.css" />
+    <link rel="stylesheet" href="<?= base_url() ?>temp/home/muri-digital.css" />
 
     <!--Google Fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  font-family: Roboto;
+  width: 700px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.social-share-overlay {
+  
+  a.overlay-button {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px;
+    opacity: 0.2;
+    transition: all 0.2s ease 0s;
+
+    i {
+      padding-left: 20px;
+      padding-right: 10px;
+      display: inline-block;
+    }
+    
+    p {
+      display: none;
+    }
+    &:hover {
+      width: 190px;
+      opacity: 1;
+      transition: all 0.2s ease 0s;
+    }
+    
+    &:hover p {
+      display: inline;
+    }
+    
+    &.facebook {
+      background-color: #3A5997;
+    }
+    
+    &.twitter {
+      background-color: #55ABED;
+    }
+  }
+}
+</style>
+    
   </head>
   <body>
     <!-- Preloader -->
@@ -49,10 +111,10 @@
           <div class="topbar-nav">
             <ul>
               <li>
-                <a href="#"><i class="fas fa-unlock-alt"></i> Login</a>
+                <a href="<?= base_url() ?>auth"><i class="fas fa-unlock-alt"></i> Login</a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+                <a href="<?= base_url() ?>register"><i class="fas fa-user-plus"></i> Register</a>
               </li>
             </ul>
           </div>
@@ -107,15 +169,15 @@
                     <li class="has-submenu">
                       <a href="#">About</a>
                       <ul class="submenu">
-                        <li><a href="<?= base_url() ?>">Visi & Misi</a></li>
-                        <li><a href="<?= base_url() ?>">Stuktur Organisasi</a></li>
+                        <li><a href="<?= base_url() ?>home/vision">Visi & Misi</a></li>
+                        <!-- <li><a href="<?= base_url() ?>">Stuktur Organisasi</a></li> -->
                       </ul>
                     </li> 
                     <li class="has-submenu">
                       <a href="#">Kegiatan</a>
                       <ul class="submenu">
-                        <li><a href="<?= base_url() ?>">Galeri Foto</a></li>
-                        <li><a href="<?= base_url() ?>">Galeri Vidio</a></li>
+                        <li><a href="<?= base_url() ?>home/gallery">Galeri Foto</a></li>
+                        <li><a href="<?= base_url() ?>home/video">Galeri Vidio</a></li>
                       </ul>
                     </li> 
                     <li><a href="<?= base_url() ?>home/blog">Contact</a></li> 
@@ -191,166 +253,13 @@
 
     <!--Footer Start-->
     <div class="footer-light bg-bglight pt-50">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="footer-widget widget">
-              <h4 class="widget-title">Popular Courses</h4>
-              <div class="popular-courses">
-                <!--Course Item Start-->
-                <div class="course-item">
-                  <div class="course-thumb">
-                    <img src="<?= base_url() ?>temp/home/img/courses/4.jpg" alt="Image" />
-                  </div>
-                  <div class="course-info">
-                    <div class="title">
-                      <h5>
-                        <a href="#"
-                          >Lorem ipsum dolor sit ami amet conse ctetur.</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="meta">
-                      <span>By Md Mojib</span>
-                    </div>
-                  </div>
-                </div>
-                <!--Course Item End-->
-                <!--Course Item Start-->
-                <div class="course-item">
-                  <div class="course-thumb">
-                    <img src="<?= base_url() ?>temp/home/img/courses/5.jpg" alt="Image" />
-                  </div>
-                  <div class="course-info">
-                    <div class="title">
-                      <h5>
-                        <a href="#"
-                          >Duis aute irure dolor in repre hend erit.</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="meta">
-                      <span>By Md Dalwar</span>
-                    </div>
-                  </div>
-                </div>
-                <!--Course Item End-->
-                <!--Course Item Start-->
-                <div class="course-item">
-                  <div class="course-thumb">
-                    <img src="<?= base_url() ?>temp/home/img/courses/6.jpg" alt="Image" />
-                  </div>
-                  <div class="course-info">
-                    <div class="title">
-                      <h5>
-                        <a href="#"
-                          >Sed ut pers pici atis unde omnis iste natus.</a
-                        >
-                      </h5>
-                    </div>
-                    <div class="meta">
-                      <span>By Md Habib</span>
-                    </div>
-                  </div>
-                </div>
-                <!--Course Item End-->
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <!--Links Widget Start-->
-            <div class="footer-widget widget">
-              <h4 class="widget-title">Useful Links</h4>
-              <div class="links">
-                <ul>
-                  <li><a href="<?= base_url() ?>">Beranda</a></li>
-                  <li><a href="<?= base_url() ?>blog">Berita</a></li>
-                  <li><a href="<?= base_url() ?>">Visi & Misi</a></li>
-                  <li><a href="<?= base_url() ?>">Struktur Organisasi</a></li>
-                  <li><a href="<?= base_url() ?>">Galeri Foto</a></li>
-                  <li><a href="<?= base_url() ?>">Galeri Video</a></li>
-                  <li><a href="<?= base_url() ?>">Contact</a></li>
-                  <li><a href="<?= base_url() ?>">Pendafataran Peserta baru</a></li>
-                  <li><a href="<?= base_url() ?>">Cek Status Pendafataran</a></li>
-                </ul>
-              </div>
-            </div>
-            <!--Links Widget End-->
-          </div>
-          <!--Top News Wedget Start-->
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="footer-widget widget">
-              <h4 class="widget-title">Top News</h4>
-              <div class="top-news">
-                <ul>
-                  <li>
-                    <a href="blog-single.html"
-                      >Enim ad minima veniam exercit atio quis nostrum</a
-                    >
-                    <span
-                      ><i class="far fa-calendar-alt"></i> 26 April 2021</span
-                    >
-                  </li>
-                  <li>
-                    <a href="blog-single.html"
-                      >Quas molestias excepturi sint occaecati cupiditate</a
-                    >
-                    <span
-                      ><i class="far fa-calendar-alt"></i> 10 April 2021</span
-                    >
-                  </li>
-                  <li>
-                    <a href="blog-single.html"
-                      >Nam libero tempore, cum soluta nobis est elig.</a
-                    >
-                    <span
-                      ><i class="far fa-calendar-alt"></i> 05 April 2021</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!--Top News Wedget Start-->
-
-          <!--Twitter Feed Start-->
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="footer-widget widget">
-              <h4 class="widget-title">Twitter Feed</h4>
-              <div class="twitter-feed">
-                <ul>
-                  <li>
-                    <span class="title"
-                      >Conse ctetur adipi scing elit sed...</span
-                    >
-                    <a class="link" href="#">https://twitter.com/adskse5we4</a>
-                    <span class="time">10 hour ago</span>
-                  </li>
-                  <li>
-                    <span class="title">Maxime placeat facere poss...</span>
-                    <a class="link" href="#">https://twitter.com/adfewefgg</a>
-                    <span class="time">05 hour ago</span>
-                  </li>
-                  <li>
-                    <span class="title">Ihil impedit quo minus id quod...</span>
-                    <a class="link" href="#"
-                      >https://twitter.com/efs4fe634sgh</a
-                    >
-                    <span class="time">03 hour ago</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!--Twitter Feed Start-->
-        </div>
-      </div>
+       
       <div class="footer-bar ptb-15 mt-15">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
               <div class="footer-logo">
-                <img src="<?= base_url() ?>assets/images/<?= webinfo('logo') ?>" alt="Logo" />
+                Copyright &copy; <a href="https://muridigital.com"> Muri Digital</a>
               </div>
             </div>
             <div class="col-sm-6">
@@ -406,3 +315,4 @@
     </script>
   </body>
 </html>
+ 

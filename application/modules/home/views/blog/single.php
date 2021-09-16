@@ -29,12 +29,14 @@
                     <!--Blog Post Item Start-->
                     <div class="blog-item single-post">
                         <div class="blog-thumb">
-                            <img src="<?= base_url() ?>temp/home/img/courses/1.jpg" style="width:100%;" alt="Image">
+                            <img src="<?= base_url() ?>assets/blog/<?= $blog['file'] ?>" style="width:100%;" alt="Image">
                         </div>
+                        
                         <div class="blog-info mtb-15">
                             <div class="blog-meta">
                                 <span><i class="fas fa-folder"></i> <?= $blog['created_by'] ?></span>
                                 <span><i class="fas fa-calendar-alt"></i> <?= date_indo($blog['created_at']) ?></span>
+                                <span></span> 
                             </div>
                             <div class="blog-title">
                                 <h4><?= $blog['title'] ?></h4>
